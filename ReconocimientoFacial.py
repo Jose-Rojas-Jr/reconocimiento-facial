@@ -67,3 +67,4 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+##prueba de carga no tomar encuenta
