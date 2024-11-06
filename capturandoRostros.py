@@ -2,7 +2,7 @@ import cv2
 import os
 import imutils
 
-personName = 'jose'
+personName = 'luis'
 dataPath = 'C:/Users/jrjos/OneDrive/Escritorio/Reconocimiento Facial/Data'#Cambia a la ruta donde hayas almacenado Data
 personPath = dataPath + '/' + personName
 
@@ -10,8 +10,8 @@ if not os.path.exists(personPath):
     print('carpeta creada :', personPath)
     os.makedirs(personPath)
     
-cap = cv2.VideoCapture('jose.mp4')
-#cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
+#cap = cv2.VideoCapture('jose.mp4')
+cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
 
 faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
 count = 0
@@ -35,7 +35,7 @@ while True:
 	cv2.imshow('frame',frame)
 
 	k =  cv2.waitKey(1)
-	if k == 27 or count >= 250:
+	if k == 27 or count >= 400:
 		break
 
 cap.release()
